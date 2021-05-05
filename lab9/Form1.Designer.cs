@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.probability1Label = new System.Windows.Forms.Label();
             this.probability5Label = new System.Windows.Forms.Label();
             this.probability4Label = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.numberOfExperimentsLabel = new System.Windows.Forms.Label();
             this.numberOfExperimentsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.startButton = new System.Windows.Forms.Button();
+            this.conclusionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.probability1NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probability4NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.probability3NumericUpDown)).BeginInit();
@@ -207,19 +208,19 @@
             // 
             // chart1
             // 
-            chartArea1.AxisX.Maximum = 5D;
-            chartArea1.AxisX.Minimum = 1D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.AxisX.Maximum = 5D;
+            chartArea3.AxisX.Minimum = 1D;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(287, 21);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(491, 300);
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
@@ -260,11 +261,22 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // conclusionLabel
+            // 
+            this.conclusionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.conclusionLabel.Location = new System.Drawing.Point(12, 344);
+            this.conclusionLabel.Name = "conclusionLabel";
+            this.conclusionLabel.Size = new System.Drawing.Size(766, 50);
+            this.conclusionLabel.TabIndex = 14;
+            this.conclusionLabel.Text = "Вывод: При увеличении числа экспериментов эмпирическая вероятность каждого событи" +
+    "я стремится к теоретической";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 352);
+            this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.conclusionLabel);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.numberOfExperimentsNumericUpDown);
             this.Controls.Add(this.numberOfExperimentsLabel);
@@ -308,6 +320,7 @@
         private System.Windows.Forms.Label numberOfExperimentsLabel;
         private System.Windows.Forms.NumericUpDown numberOfExperimentsNumericUpDown;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label conclusionLabel;
     }
 }
 
